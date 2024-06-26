@@ -1,2 +1,9 @@
 [dependencies]
 base = "0.11.1"
+
+# from the carlson protocol
+# @todo: remove this once the carlson protocol is published
+test = "2.0.0"
+icrc-fungible = "0.0.5"
+map = "9.0.1"
+candy = "0.3.0"

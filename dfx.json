@@ -1,8 +1,34 @@
 {
   "canisters": {
+    "ckBTC": {
+      "main": "carlson/src/ledger/main.mo",
+      "type": "motoko",
+      "remote": {
+        "candid": "src/ledger/ckBTC.did",
+        "id": {
+          "ic": "mxzaz-hqaaa-aaaar-qaada-cai"
+        }
+      }
+    },
+    "ledger": {
+      "main": "carlson/src/ledger/main.mo",
+      "type": "motoko"
+    },
+    "carlson": {
+      "main": "carlson/src/protocol/main.mo",
+      "type": "motoko"
+    },
     "backend": {
       "main": "src/backend/main.mo",
       "type": "motoko"
+    },
+    "frontend": {
+      "frontend": {
+          "entrypoint": "src/frontend/index.html"
+      },
+      "dependencies": ["backend"],
+      "source": ["src/frontend/dist"],
+      "type": "assets"
     }
   },
   "defaults": {
